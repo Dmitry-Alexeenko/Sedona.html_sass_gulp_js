@@ -1,4 +1,21 @@
-header {
-	background-color: pink;
-	padding: 20px;
+$bgcolor:#f2f2f2;
+
+
+.page-header {
+
+	padding: 0px;
+	margin: 0px;
+	background-color: $bgcolor;
+
+
+
+}	
+.page-header__container {
+	max-width: 1200px;
+	min-height: 300px;
+	margin: 0 auto;
+	background-image: url("../img/back-desktop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
