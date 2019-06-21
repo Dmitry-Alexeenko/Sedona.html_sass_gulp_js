@@ -3,85 +3,121 @@
   <head>
     <meta charset="utf-8">
     <title>Sedona</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/index-styles.css">
   </head>
   <body>
 
     <header class="page-header">
-      <div class="page-header__container">
-        <nav class=" main-nav">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">Главная</li>
+      <nav class="main-nav">
+         <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a href="form.html">Главная</a></li>
             <li class="site-list__item">Фото и видео</li>
-            <li class="site-list__item"><img src="img/logotype-desktop.png" alt="logo"></li>
+            <li class="site-list__logo"><img src="img/logotyle-mobile.png" alt="logo" width="104" height="84"></li>
             <li class="site-list__item">Форма отзыва</li>
-            <li class="site-list__item">Dmitry A</li>
-          </ul>
-        </nav>
-        <img class="header__logo" src="img/logotype-desktop.png" alt="logo">
+            <li class="site-list__item">Dmitry A</li>          
+        </ul>
+      </nav>
+      <div class="page-header__image">
+        <div class="page-header__slogan"></div>
       </div>
     </header>
 
     <main class="page-main">
       <section class="reason">
-        <h1 class="reason__promo">Седона — небольшой городок в Аризоне,  заслуживающий большего! </h1>
-        <p class="reason__advantage">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        <ul class="reason__list">
-          <li class="reason__item">
-            <header class="reason__title">Настоящий городок  — №1 —</header>
+        <div class="reason__item reason__item--promo">
+          <div class="reason__container">
+            <h1 class="reason__promo">Седона — небольшой городок в Аризоне,  заслуживающий большего! </h1>
+            <p class="reason__advantage">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          </div>
+        </div>
+        <div class="reason__item reason__item--city">
+          <div class="reason__contain-city">
+            <header class="reason__title">Настоящий городок </header>
+            <div class="reason__number">— №1 —</div>
             <div class="reason__description">Седона не аттракцион для туристов, там течет своя жизнь</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Жилье</header>
-            <div class="reason__description">Рекомендуем пожить в настоящем мотеле, все как в кино</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Еда</header>
-            <div class="reason__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Сувениры</header>
-            <div class="reason__description">Не только китайского, но и местного производства!</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Там есть мост Дьявола — №2 —</header>
+          </div>
+          <div class="reason__photo-city"></div>
+        </div>
+        <div class="reason__item reason__item--icons">
+          <div class="reason__contain-icons">
+            <div class="reason__icon-home"></div>
+            <div class="reason__contain">
+              <header class="reason__title">Жилье</header>
+              <div class="reason__description">Рекомендуем пожить в настоящем мотеле, все как в кино
+              </div>
+            </div>
+          </div>
+          <div class="reason__contain-icons">
+            <div class="reason__icon-gift"></div>
+            <div class="reason__contain">
+              <header class="reason__title">Сувениры</header>
+              <div class="reason__description">Не только китайского, но и местного производства!</div>
+            </div>
+          </div>
+          <div class="reason__contain-icons">
+            <div class="reason__icon-eat"></div>
+            <div class="reason__contain">
+              <header class="reason__title">Еда</header>
+              <div class="reason__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+            </div>
+          </div>
+        </div>
+        <div class="reason__item reason__item--bridge">
+          <div class="reason__contain-bridge">
+            <header class="reason__title">Там есть мост Дьявола</header>
+            <div class="reason__number">— №2 —</div>
             <div class="reason__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Небольшая площадь — №3 —</header>
+          </div>
+          <div class="reason__photo-bridge"></div>
+        </div>
+        <div class="reason__item reason__item--other">
+          <div class="reason__contain-other">
+            <header class="reason__title">Небольшая площадь</header>
+            <div class="reason__number">— №3 —</div>
             <div class="reason__description">Все интересные места находятся очень близко</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Красивая дорога — №4 —</header>
+          </div>
+          <div class="reason__contain-other">
+            <header class="reason__title">Красивая дорога</header>
+            <div class="reason__number">— №4 —</div>
             <div class="reason__description">Ехать в Сидону из Лас-Вегаса совсем не скучно!</div>
-          </li>
-          <li class="reason__item">
-            <header class="reason__title">Мало Туристов — №5 —</header>
+          </div>
+          <div class="reason__contain-other">
+            <header class="reason__title">Мало Туристов</header>
+            <div class="reason__number">— №5 —</div>
             <div class="reason__description">Большинство едет в Гранд Каньон и толпится там</div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
+    
 
       <section class="interested">
-        <div class="interested__question">Заинтересовались?</div>
-        <div class="interested__title">Укажите предлогаемые даты поездки, и мы покажем Вам предложения гостиниц в Седоне</div>
-        <button class="interested__button button" type="button">Найти гостиницу</button>
+        <div class="interested__contain">
+          <div class="interested__question">Заинтересовались?</div>
+          <div class="interested__title">Укажите предлогаемые даты поездки, и мы покажем Вам предложения гостиниц в Седоне</div>
+          <a class="button" href="">Найти гостиницу</a>
+        </div>
+          <div class="reason__photo-map"></div>
+
       </section>
+
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__promo about">
-        <div class="about__hash">#Visitedona</div>
-        <div class="about__social">
-          <a class="about__link" href=""> Twitter</a>
-          <a class="about__link" href="">Facebook</a>
-          <a class="about__link" href="">Youtube</a>
+      <div class="page-footer__contain">
+        <div class="page-footer__hash">#Visitedona</div>
+        <div class="page-footer__social">
+          <a class="page-footer__link page-footer__link--t" href=""> Twitter</a>
+          <a class="page-footer__link page-footer__link--f" href="">Facebook</a>
+          <a class="page-footer__link page-footer__link--y" href="">Youtube</a>
         </div>
+
+        <div class="page-footer__copyright copyright">
+          <div class="copyright__title">Разработано</div>
+          <a class="copyright__link" href="">Dmitry A.</a>
+        </div> 
       </div>
-      <div class="page-footer__copyright copyright">
-        <div class="copyright__title">Разработано</div>
-        <a class="copyright__link" href="">Dmitry A.</a>
-      </div>  
     </footer>
 
   </body>

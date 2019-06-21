@@ -1,13 +1,10 @@
 
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_scaffolding.scss";
 @import "_index-header.scss";
 @import "_index-main.scss";
 @import "_index-footer.scss";
 
 
  
-html,
-body {
-	margin: 0px;
-	padding: 0px;
-
-}
