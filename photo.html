@@ -3,33 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Sedona-form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/photo-styles.css">
   </head>
   <body>
 
-  	<header class="page-header">
-      <nav class="header__nav main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">Главная</li>
-          <li class="site-list__item">Фото и видео</li>
-          <li class="site-list__item"><img src="" alt="logo"></li>
-          <li class="site-list__item">Форма отзыва</li>
-          <li class="site-list__item">Dmitry A</li>
+    <header class="page-header">
+      <nav class="main-nav">
+         <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a href="index.html">Главная</a></li>
+            <li class="site-list__item">Фото и видео</li>
+            <li class="site-list__logo"><img src="img/logotyle-mobile.png" alt="logo" width="104" height="84"></li>
+            <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
+            <li class="site-list__item">Dmitry A</li>          
         </ul>
       </nav>
-      <img class="header__logo" src="" alt="logo">
+      <div class="page-header__image">
+        <div class="page-header__slogan"></div>
+      </div>
     </header>
 
     <main class="page-main">
     	<section class="photo">
-    		<header class="photo__head head">
-    			<h2 class="head__title">Фото и видео</h2>
-    			<p class="head__description">Не можете решиться на путешествие из за курса?
-    				Фотографии помогут Вам забыть о политике и экономике.</p>
-    		</header>
+            <div class="photo__item photo__item--promo">
+                <div class="photo__container">
+                    <h1 class="photo__promo">Фото и видео</h1>
+                    <p class="photo__advantage">Не можете решиться на путешествие из за курса?
+                    Фотографии помогут Вам забыть о политике и экономике.</p>
+                </div>
+            </div>
     		<ul class="photo__list">
-    			<li class="photo__item">
-    				<img class="photo__img" src="">
+    			<li class="photo__item photo__item--one">
+                    <div class="photo__img photo__img--one"></div>
     				<div class="photo__contein">
     					<h3 class="photo__title">Неродные просторы</h3>
     					<p class="photo__author">Автор фото: Борис</p>
@@ -39,8 +45,8 @@
     					</div>
     				</div>
     			</li>
-    			<li class="photo_item">
-    				<img class="photo__img" src="">
+    			<li class="photo__item photo__item--two">
+    				<div class="photo__img photo__img--two"></div>
     				<div class="photo__contein">
     					<h3 class="photo__title">Местная растительность</h3>
     					<p class="photo__author">Автор фото:Сергей</p>
@@ -50,9 +56,9 @@
     					</div>
     				</div>
     			</li>
-    			<li class="photo_item">
-    				<img class="photo__img" src="">
-    				<div class="photo__contein">
+    			<li class="photo__item photo__item--three">
+    				<div class="photo__img photo__img--three"></div>
+    				<div class="photo__contein photo__contein--other">
     					<h3 class="photo__title">Дорога на север</h3>
     					<p class="photo__author">Автор фото:Петр</p>
     					<div class="like">
@@ -61,8 +67,8 @@
     					</div>
     				</div>
     			</li>
-    			<li class="photo_item">
-    				<img class="photo__img" src="">
+    			<li class="photo__item photo__item--four">
+    				<div class="photo__img photo__img--four"></div>
     				<div class="photo__contein">
     					<h3 class="photo__title">Мост дьявола</h3>
     					<p class="photo__author">Автор фото:Антон</p>
@@ -76,31 +82,29 @@
     	</section>
 
     	<section class="video">
-    		<header class="video__head head">
-    			<h2 class="head__title">Все еще сомневаетесь?</h2>
-    			<p class="head__description">Смотрите видеопризентацию и скорее за билетами, пока
-    				они не подорожали в очередной раз!</p>
-    		</header>
-    		<div>
-    			<img class="video__content" src="">
-    			<div class="video__buttons"></div>
-    		</div>
+            <div class="video__container">
+                <h2 class="video__promo">Все еще сомневаетесь?</h2>
+                <p class="video__advantage">Смотрите видеопризентацию и скорее за билетами, пока
+                они не подорожали в очередной раз!</p>
+            </div>
+            <div class="video__clip"></div>
     	</section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__promo about">
-        <div class="about__hash">#Visitedona</div>
-        <div class="about__social">
-          <a class="about__link" href=""> Twitter</a>
-          <a class="about__link" href="">Facebook</a>
-          <a class="about__link" href="">Youtube</a>
+      <div class="page-footer__contain">
+        <div class="page-footer__hash">#Visitedona</div>
+        <div class="page-footer__social">
+          <a class="page-footer__link page-footer__link--t" href=""> Twitter</a>
+          <a class="page-footer__link page-footer__link--f" href="">Facebook</a>
+          <a class="page-footer__link page-footer__link--y" href="">Youtube</a>
         </div>
+
+        <div class="page-footer__copyright copyright">
+          <div class="copyright__title">Разработано</div>
+          <a class="copyright__link" href="">Dmitry A.</a>
+        </div> 
       </div>
-      <div class="page-footer__copyright copyright">
-        <div class="copyright__title">Разработано</div>
-        <a class="copyright__link" href="">Dmitry A.</a>
-      </div>  
     </footer>
 
   </body>

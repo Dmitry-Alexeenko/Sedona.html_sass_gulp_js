@@ -1,0 +1,221 @@
+.page-main {
+	display: flex;
+	flex-direction: column;	
+}
+
+.photo {
+	display: flex;
+	flex-direction: column;	
+	width: 320px;
+	margin: 0 auto;	
+	background-color: white;
+	padding: 0 20px;
+	box-sizing: border-box;
+	color: black;
+}
+
+.photo__container {
+	text-transform: uppercase;
+	text-align: center;		
+}
+
+.photo__promo {
+	font-size: 18px;
+	line-height: 26px;
+	color: black;
+}
+.photo__advantage {
+	font-size: 14px;
+	line-height: 26px;
+	color: black;
+}
+
+.photo__list {
+	display: flex;
+	flex-direction: column;	
+	@include resetstyle();
+}
+
+.photo__item {
+	border-bottom: 2px solid $border-form;
+	box-sizing: border-box;
+}
+
+.photo__img {
+	height: 280px;
+}
+
+.photo__img--one {
+	background-image: url("../img/photo-1-desktop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.photo__img--two {
+	background-image: url("../img/photo-2-desktop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.photo__img--three {
+	background-image: url("../img/photo-3-desktop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.photo__img--four {
+	background-image: url("../img/photo-bridge.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.photo__title,
+.like {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+}
+
+.like__number {
+	padding: 0px;
+	margin: 0px;
+}
+.photo__author {
+	font-size: 12px;
+	line-height: 22px;
+	color:#333333;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+.video {
+	display: flex;
+	flex-direction: column;	
+	width: 320px;
+	margin: 0 auto;	
+	background-color: white;
+	box-sizing: border-box;
+	color: black;
+}
+
+.video__container {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 20px;	
+}
+
+.video__promo {
+	font-size: 18px;
+	line-height: 26px;
+	color: black;
+}
+.video__advantage {
+	font-size: 14px;
+	line-height: 26px;
+	color: black;
+}
+
+.video__clip {
+	height: 205px;
+	background-image: url("../img/video-desktop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+@media (min-width: $tablet-width) {
+	.photo{
+		width: 100%;
+		padding: 0 60px;
+	}
+
+	.photo__item--promo{
+		width: 100%;
+		margin: 0;	
+	}
+
+	.photo__container {
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;	
+	}
+
+	.photo__list{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.photo__item {
+		border-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.photo__item--one {
+		width: 100%;
+
+	}
+
+	.photo__item--two,
+	.photo__item--three,
+	.photo__item--four {
+		width: 324px;
+		flex-grow: 1;
+	}
+	
+	.photo__img--one {
+		height: 400px;
+	}
+	.photo__contein {
+		background-color: $bgcolor;
+
+	}
+
+	.photo__contein--other {
+		background-color: #eaeaea;
+	}
+
+	.video{
+		width: 100%;
+		padding: 0 60px;
+	}
+
+	.video__container {
+		width: 470px;
+		margin: 0 auto;
+	}
+
+	.video__clip {
+		height: 510px;
+		width: 648px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.photo{
+		width: 1200px;
+		padding: 0;
+	}
+
+	.video {
+		width: 1200px;
+	}
+
+	.video__clip {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+}
