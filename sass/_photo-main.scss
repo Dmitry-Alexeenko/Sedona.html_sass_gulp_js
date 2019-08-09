@@ -9,14 +9,15 @@
 	width: 320px;
 	margin: 0 auto;	
 	background-color: white;
-	padding: 0 20px;
+
 	box-sizing: border-box;
 	color: black;
 }
 
 .photo__container {
 	text-transform: uppercase;
-	text-align: center;		
+	text-align: center;
+	padding: 10px 0 ;		
 }
 
 .photo__promo {
@@ -37,8 +38,12 @@
 }
 
 .photo__item {
-	border-bottom: 2px solid $border-form;
+	margin-top: 20px;
+	border-bottom: 1px solid $border-form;
 	box-sizing: border-box;
+	padding: 0 20px;
+	padding-bottom: 20px;
+	position: relative;
 }
 
 .photo__img {
@@ -80,11 +85,25 @@
 	line-height: 24px;
 	font-weight: bold;
 	padding: 0px;
+	padding-top: 15px;
 	margin: 0px;
+}
+.like {
+	display: flex;
+}
+.like__icon {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url("../img/like-icon.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25px;
+	margin-right: 10px;
 }
 
 .like__number {
-	padding: 0px;
+	padding-top: 2px;
 	margin: 0px;
 }
 .photo__author {
@@ -104,12 +123,14 @@
 	background-color: white;
 	box-sizing: border-box;
 	color: black;
+	padding-top: 15px;
 }
 
 .video__container {
 	text-align: center;
 	text-transform: uppercase;
-	padding: 0 20px;	
+	padding: 0 20px;
+	padding-bottom: 15px;	
 }
 
 .video__promo {
@@ -129,6 +150,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	
 }
 
 @media (min-width: $tablet-width) {
@@ -161,7 +183,9 @@
 		padding: 0px;
 		margin: 0px;
 	}
-
+	.photo__title {
+		padding-top: 5px;
+	}
 	.photo__item--one {
 		width: 100%;
 
@@ -179,11 +203,22 @@
 	}
 	.photo__contein {
 		background-color: $bgcolor;
+		display: flex;
 
 	}
 
 	.photo__contein--other {
 		background-color: #eaeaea;
+	}
+	.photo__content{
+		flex-grow: 1;
+		margin-left: 15px;
+		padding-bottom: 5px;
+
+	}
+	.like {
+		flex-basis: auto;
+	    margin-right: 15px;
 	}
 
 	.video{
@@ -208,9 +243,23 @@
 		width: 1200px;
 		padding: 0;
 	}
-
+	.photo__contein {
+		position: absolute;
+		width: 100%;
+		z-index: 10;
+		bottom: 0px;
+		background-color: rgba(0,0,0,0.4);
+		color: white;
+	}
+	.like__icon {
+		background-image: url("../img/like-icon.desc.png");
+	}
+	.photo__author {
+		color: white;
+	}
 	.video {
 		width: 1200px;
+		padding: 30px 0;
 	}
 
 	.video__clip {

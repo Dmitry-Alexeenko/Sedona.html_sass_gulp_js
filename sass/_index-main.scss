@@ -31,15 +31,21 @@ padding-top: 20px;
 	font-size: 18px;
 	line-height: 26px;
 	color: black;
+	margin: 20px 0;
 }
 .reason__advantage {
 	font-size: 14px;
 	line-height: 26px;
 	color: black;
+	margin: 25px 0;
 }
 
 
 .reason__contain-city {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: $list-color;
 	color: $color;
 
@@ -49,13 +55,23 @@ padding-top: 20px;
 
 .reason__item--icons {
 	color: black;
+	padding: 20px;
 }
+
+
 
 .reason__title {
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 26px;
+	padding:  10px 10px;
+	text-align: center;
 }
+.reason__description {
+	padding: 20px;
+	text-align: center;
+}
+
 .reason__description,
 .reason__number {
 	font-size: 14px;
@@ -68,34 +84,59 @@ padding-top: 20px;
 	background-position: center;
 	background-size: cover;
 	height: 260px;
+
 }
 .reason__icon-home {
+	flex-shrink: 0;
 	background-image: url("../img/icon-house.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	width: 40px;
-	height: 40px;
+	background-size: 40px;
+	width: 45px;
+	height: 45px;
+	margin-right: 15px;
 }
 
 .reason__icon-gift {
+	flex-shrink: 0;
 	background-image: url("../img/icon-gift.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	width: 40px;
-	height: 40px;
+	background-size: 38px;
+	width: 45px;
+	height: 45px;
+	margin-right: 15px;
 }
 
 .reason__icon-eat {
+	flex-shrink: 0;
 	background-image: url("../img/icon-burger.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	width: 40px;
-	height: 40px;
+	background-size: 40px;
+	width: 45px;
+	height: 45px;
+	margin-right: 15px;
 }
+.reason__contain-icons {
+	display: flex;
+	padding: 10px 0;
+}
+.reason__item--icons .reason__description {
+	padding: 10px 0;
+	text-align: left;
+}
+.reason__item--icons .reason__title {
+	margin-top: 15px;
+	text-align: left;
+	padding: 0px;
+}
+
 .reason__contain-bridge {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: $list-color;
 	color: $color;
 	min-height: 190px;
@@ -114,6 +155,21 @@ padding-top: 20px;
 	display: flex;
 	flex-direction: column;
 	color: black;
+	background-color: $bgcolor;
+
+}
+
+.reason__contain-other {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.reason__contain-other:not(:last-child) {
+	border-bottom: 1px solid #d6d6d6;
 }
 
 .interested {
@@ -131,7 +187,7 @@ padding-top: 20px;
 .interested__contain{
 	display: flex;
 	flex-direction: column;	
-	padding:0 10px;
+	padding:30px 30px;
 }
 
 .interested__question {
@@ -163,6 +219,14 @@ padding-top: 20px;
 	color:$color;
 	text-decoration: none;
 	text-align: center;
+
+	&:hover {
+		background-color: #669ec0;
+	}
+	&:active {
+		background-color: #5496bd;
+		opacity: 0.3;
+	}
 }
 
 .reason__photo-map {
@@ -180,6 +244,10 @@ padding-top: 20px;
 		width: 100%;
 	}
 
+	.reason__title {
+		width: 150px;
+	}
+
 	.reason__item--promo{
 		width: 100%;
 		margin: 0 ;	
@@ -190,6 +258,13 @@ padding-top: 20px;
 		margin: 0 auto;
 		text-align: center;	
 	}
+	
+	.reason__contain {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    }
 
 	.reason__item--city{
 		display: flex;
@@ -215,13 +290,38 @@ padding-top: 20px;
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+		min-height: 300px;
 		margin: 0;
 	}
 
 	.reason__contain-icons {
 		width: 33%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.reason__icon-home,
+	.reason__icon-gift,
+	.reason__icon-eat {
+	background-size: 60px;
+	width: 70px;
+	height: 70px;
+	background-position: 10px 0px;
+	}
+
+	.reason__item--icons .reason__description {
+	padding: 20px 20px;
+	text-align: center;
+	}
+
+	.reason__item--icons .reason__title {
+		margin-top: 15px;
+		text-align: center;
+		padding: 0px;
 
 	}
+
+
 	.reason__item--bridge{
 		display: flex;
 		flex-wrap: nowrap;
@@ -229,6 +329,7 @@ padding-top: 20px;
 		width: 100%;
 		margin: 0;
 	}
+
 	.reason__contain-bridge{
 		width: 33%;
 		order: 2;
@@ -243,10 +344,16 @@ padding-top: 20px;
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+		height: 250px;
 		margin: 0;
 	}	
 	.reason__contain-other{
 		width: 33%;
+		border: none;
+	}
+
+	.reason__contain-other:not(:last-child) {
+		border-bottom-style: none;
 	}
 
 	.interested{

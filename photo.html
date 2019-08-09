@@ -8,21 +8,42 @@
     <link rel="stylesheet" href="css/photo-styles.css">
   </head>
   <body>
-
-    <header class="page-header">
-      <nav class="main-nav">
-         <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="index.html">Главная</a></li>
-            <li class="site-list__item">Фото и видео</li>
-            <li class="site-list__logo"><img src="img/logotyle-mobile.png" alt="logo" width="104" height="84"></li>
-            <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
-            <li class="site-list__item">Dmitry A</li>          
+      <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item"><a>Фото и видео</a></li>
+          <li class="site-list__logo">
+            <picture>
+              <source media= "(min-width: 1200px)" srcset="img/logotype-desktop.png">
+              <img src="img/logotyle-mobile.png" alt="logo">
+            </picture>
+          </li>
+          <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
+          <li class="site-list__item"><a href="#">Dmitry A</a></li>          
         </ul>
       </nav>
       <div class="page-header__image">
         <div class="page-header__slogan"></div>
       </div>
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
     <main class="page-main">
     	<section class="photo">
@@ -37,8 +58,10 @@
     			<li class="photo__item photo__item--one">
                     <div class="photo__img photo__img--one"></div>
     				<div class="photo__contein">
-    					<h3 class="photo__title">Неродные просторы</h3>
-    					<p class="photo__author">Автор фото: Борис</p>
+              <div class = "photo__content">
+                <h3 class="photo__title">Неродные просторы</h3>
+                <p class="photo__author">Автор фото: Борис</p>
+              </div>
     					<div class="like">
     						<span class="like__icon"></span>
     						<p class="like__number">1350</p>
@@ -48,8 +71,10 @@
     			<li class="photo__item photo__item--two">
     				<div class="photo__img photo__img--two"></div>
     				<div class="photo__contein">
-    					<h3 class="photo__title">Местная растительность</h3>
-    					<p class="photo__author">Автор фото:Сергей</p>
+              <div class = "photo__content">
+      					<h3 class="photo__title">Местная растительность</h3>
+      					<p class="photo__author">Автор фото:Сергей</p>
+              </div>
     					<div class="like">
     						<span class="like__icon"></span>
     						<p class="like__number">143</p>
@@ -59,8 +84,10 @@
     			<li class="photo__item photo__item--three">
     				<div class="photo__img photo__img--three"></div>
     				<div class="photo__contein photo__contein--other">
-    					<h3 class="photo__title">Дорога на север</h3>
-    					<p class="photo__author">Автор фото:Петр</p>
+              <div class = "photo__content">
+      					<h3 class="photo__title">Дорога на север</h3>
+      					<p class="photo__author">Автор фото:Петр</p>
+              </div>
     					<div class="like">
     						<span class="like__icon"></span>
     						<p class="like__number">96</p>
@@ -70,8 +97,10 @@
     			<li class="photo__item photo__item--four">
     				<div class="photo__img photo__img--four"></div>
     				<div class="photo__contein">
-    					<h3 class="photo__title">Мост дьявола</h3>
-    					<p class="photo__author">Автор фото:Антон</p>
+              <div class = "photo__content">
+      					<h3 class="photo__title">Мост дьявола</h3>
+      					<p class="photo__author">Автор фото:Антон</p>
+              </div>
     					<div class="like">
     						<span class="like__icon"></span>
     						<p class="like__number">254</p>

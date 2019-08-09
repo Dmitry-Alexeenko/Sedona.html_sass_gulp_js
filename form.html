@@ -10,19 +10,41 @@
   <body>
 
     <header class="page-header">
-      <nav class="main-nav">
-         <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="index.html">Главная</a></li>
-            <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
-            <li class="site-list__logo"><img src="img/logotyle-mobile.png" alt="logo" width="104" height="84"></li>
-            <li class="site-list__item">Форма отзыва</li>
-            <li class="site-list__item">Dmitry A</li>          
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
+          <li class="site-list__logo">
+            <picture>
+              <source media= "(min-width: 1200px)" srcset="img/logotype-desktop.png">
+              <img src="img/logotyle-mobile.png" alt="logo">
+            </picture>
+          </li>
+          <li class="site-list__item"><a>Форма отзыва</a></li>
+          <li class="site-list__item"><a href="#">Dmitry A</a></li>          
         </ul>
       </nav>
       <div class="page-header__image">
         <div class="page-header__slogan"></div>
       </div>
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
     <main class="page-main">
     	<section class="form">
@@ -40,26 +62,26 @@
 	    			<h3 class="list__title">Представьтесь:</h3>
 	    			<div class="list__about name">
 	    				<label for="fullname">Имя*:</label>
-	    				<input type="text" name="fullname" id="fullname">
+	    				<input type="text" placeholder="Введиде имя" name="fullname" id="fullname" >
 	    			</div>
 	    			<div class="list__about surname">
 	    				<label for="fullsurname">Фамилия*:</label>
-	    				<input type="text" name="fullsurname" id="fullsurname">
+	    				<input type="text" placeholder="Введиде Фамилию" name="fullsurname" id="fullsurname">
 	    			</div>
 	    			<div class="list__about patronymic">
 	    				<label for="nomen">Отчество*:</label>
-	    				<input type="text" name="nomen" id="nomen">
+	    				<input type="text" placeholder="Введиде отчество" name="nomen" id="nomen">
 	    			</div>
     			</div>
     			<div class="list__item list__item--inform">
 	    			<h3 class="list__title">Контактная информация:</h3>
 	    			<div class="list__inform">
 	    				<label for="phone">Контактный телефон*:</label>
-	    				<input type="tel" name="phone" id="phone">
+	    				<input type="tel" placeholder="Введиде телефон" name="phone" id="phone">
 	    			</div>
 	    			<div class="list__inform">
 	    				<label for="email">Электронная почта*:</label>
-	    				<input type="email" name="email" id="email">
+	    				<input type="email" placeholder="Введиде почту" name="email" id="email">
 	    			</div>
     			</div>
     			<div class="list__item list__item--impression">
@@ -98,7 +120,7 @@
     			</div>
     			<div class="list__item list__item--emotion">
     				<h3 class="list__title">Опишите свои эмоции:</h3>
-    				<textarea name="message" id="message"></textarea>
+    				<textarea name="message" placeholder="Опишите подробно все свои восторги" id="message"></textarea>
     			</div>
     			<input class="button" type="submit" value="Оставить отзыв">
     		</form>
