@@ -21,6 +21,7 @@
 .form__container {
 	text-transform: uppercase;
 	text-align: center;	
+	padding: 30px  0;
 	
 }
 
@@ -43,16 +44,15 @@
 .list__item {
 	border-bottom: 2px solid $border-form;
 	box-sizing: border-box;
-
-
-	
+	padding-bottom: 20px;
 }
 
 .list__about {
 	display: flex;
 	align-items: center;
-	margin:15px 0;
+	padding:10px 0;
 	text-transform: uppercase;
+
 }
 
 .list__about label,
@@ -73,6 +73,23 @@
 	line-height: 26px;
 	padding: 10px;
 }
+input[type="tel"] {
+	background-image: url("../img/phone.png");
+	background-repeat: no-repeat;
+	background-position: 95%;
+	background-size: 18px;
+}
+
+input[type="email"] {
+	background-image: url("../img/mail.png");
+	background-repeat: no-repeat;
+	background-position: 95%;
+	background-size: 18px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
 
 .list__title {
 	font-size: 18px;
@@ -83,6 +100,7 @@
 .list__inform {
 	margin:15px 0;
 	text-transform: uppercase;
+	position: relative;
 }
 
 .list__choice,
@@ -92,12 +110,81 @@
 	line-height: 26px;
 }
 
+
+
+.list__choice label,
+.list__check label {
+	display: block;
+	padding: 20px 0;
+	padding-left: 60px;
+	position: relative;
+}
+.list__choice label::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 9px;
+	width: 20px;
+	height: 20px;
+	border: 14px solid #f2f2f2;
+	background-color: #f2f2f2;
+	border-radius: 50%;
+}
+
+.list__check label::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 9px;
+	width: 20px;
+	height: 20px;
+	border: 14px solid #f2f2f2;
+	background-color: #f2f2f2;
+	border-radius: 15%;
+}
+.list__check label::before {
+	content: "";
+	position: absolute;
+	left: 13px;
+	top: 23px;
+	width: 20px;
+	height: 10px;
+	border: 4px solid black;
+	border-top-style: none;
+	border-right-style: none;
+	background-color: #f2f2f2;
+	z-index: 2;
+	transform: rotate(-45deg);
+}
+
+#cool:checked + label[for="cool"]::after,
+#bad:checked + label[for="bad"]::after,
+#other:checked + label[for="other"]::after {
+	background-color: black;
+}
+
+#bridge:checked + label[for="bridge"]::before,
+#rok:checked + label[for="rok"]::before,
+#park:checked + label[for="park"]::before,
+#red-rok:checked + label[for="red-rok"]::before {
+	border-style: none;
+}
+
+.list__item--emotion {
+	border-bottom: none;
+	padding-bottom: 35px;
+}
+
 .list__item textarea {
 	width: 100%;
 	box-sizing: border-box;
 	height: 160px;
 	background-color: $border-form;
 	border-style: none;
+	font-size: 18px;
+	line-height: 26px;
+	color: black;
+	font-weight: bold;
 }
 
 .button {
@@ -109,6 +196,7 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	color: white;
+	margin-bottom: 50px;
 }
 
 @media (min-width: $tablet-width) {
